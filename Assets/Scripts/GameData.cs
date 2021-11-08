@@ -21,7 +21,7 @@ public class GameData : MonoBehaviour
         }
         else
         {
-            Instance = new GameData();
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
     }
