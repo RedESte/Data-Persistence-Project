@@ -18,8 +18,14 @@ public class MenuUI : MonoBehaviour
         GameData.Instance.LoadRecord();
         string bestPlayer = GameData.Instance.bestPlayer;
         int bestScore = GameData.Instance.BestScore;
-
-        bestScoreText.text = $"Best Score: {bestPlayer}: {bestScore}";
+        if (bestScore != 0)
+        {
+            bestScoreText.text = $"Best Score: {bestPlayer}: {bestScore}";
+        }
+        else
+        {
+            bestScoreText.text = $"";
+        }
     }
 
     public void SaveName()
