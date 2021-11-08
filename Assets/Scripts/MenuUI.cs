@@ -24,7 +24,7 @@ public class MenuUI : MonoBehaviour
         }
         else
         {
-            bestScoreText.text = $"";
+            bestScoreText.text = "";
         }
     }
 

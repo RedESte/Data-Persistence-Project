@@ -81,7 +81,14 @@ public class MainManager : MonoBehaviour
         GameData.Instance.LoadRecord();
         string bestPlayer = GameData.Instance.bestPlayer;
         int bestScore = GameData.Instance.BestScore;
-        BestScoreText.text = $"Best Score: {bestPlayer}: {bestScore}";
+        if (bestScore != 0)
+        {
+            BestScoreText.text = $"Best Score: {bestPlayer}: {bestScore}";
+        }
+        else
+        {
+            BestScoreText.text = "";
+        }
     }
     public void GameOver()
     {
